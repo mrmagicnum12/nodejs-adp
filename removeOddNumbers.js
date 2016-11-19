@@ -10,8 +10,11 @@ printResults(arrayOfNums);
 //public facing method for user to pass array of odd and even numbers
 function removeAllOddNumbers(list){
     
-    return removeOddNums()
-    
+    //validate list is a valid array with at least one value
+    if(Array.isArray(list) && list.length > 0)
+        return removeOddNums()
+    return console.log("please send valid array")
+
     //recursive function do to not looping
     function removeOddNums(newPostion,savedEvenNumbers){
         var position, evenNumbers;
